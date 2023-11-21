@@ -24,16 +24,22 @@ for (let i = 1; i <= 100; i++){
     
 if (i%3==0) {
     square.classList.add("squaregreen");
-    i = "fizz";
 }else {
     square.classList.add("square");
 }
 
-// if (i%5==0) {
-//     square.classList.add("squareyellow");
-//     i = ("fizz");
-// }else {
-//     square.classList.add("square");
-// }
+if (i%5==0) {
+    square.classList.add("squareyellow");
+
+}else {
+    square.classList.add("square");
+}
+
+if (i%(3*5)==0) {
+    square.classList.add("squarered");
+
+}else {
+    square.classList.add("square");
+}
 
 }
