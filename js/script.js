@@ -14,9 +14,6 @@ for (let i = 1; i <= 100; i++){
 // creo una classe al div
     square.classList.add("square");
 
-// aggiungo i numeri al div
-    square.append(i);
-
 // assegno il div al container
     container.append(square);
 
@@ -26,28 +23,16 @@ for (let i = 1; i <= 100; i++){
 
 // divido per colori e numeri se multiplo di 3 o di 5 o entrambi
     
-if (i%3==0) {
-    square.classList.add("squaregreen");
-    square.append(Fizz)
-}else {
-    square.classList.add("square");
-}
-
-if (i%5==0) {
-    square.classList.add("squareyellow");
-    square.append(Buzz)
-
-}else {
-    square.classList.add("square");
-    
-}
-
-if (i%(3*5)==0) {
-    square.classList.add("squarered");
-
-}else {
-    square.classList.add("square");
-}
-
-
+    if (i%3==0) {
+        square.classList.add("squaregreen");
+        square.append(Fizz);
+    }else if (i%5==0) {
+        square.classList.add("squareyellow");
+        square.append(Buzz);
+    }else if (i%(3*5)==0) {
+        square.classList.add("squarered");
+    }else{
+        container.append(square);
+        square.append(i);
+    }
 }
