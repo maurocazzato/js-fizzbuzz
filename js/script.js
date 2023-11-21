@@ -20,17 +20,19 @@ for (let i = 1; i <= 100; i++){
 // creo le scritte
     let Fizz = ("Fizz");
     let Buzz = ("Buzz");
+    let FizzBuzz = ("FizzBuzz");
 
 // divido per colori e numeri se multiplo di 3 o di 5 o entrambi
     
-    if (i%3==0) {
-        square.classList.add("squaregreen");
-        square.append(Fizz);
+    if (i%(3*5)==0) {
+        square.classList.add("squarered");
+        square.append(FizzBuzz);
     }else if (i%5==0) {
         square.classList.add("squareyellow");
         square.append(Buzz);
-    }else if (i%(3*5)==0) {
-        square.classList.add("squarered");
+    }else if (i%3==0) {
+        square.classList.add("squaregreen");
+        square.append(Fizz);
     }else{
         container.append(square);
         square.append(i);
