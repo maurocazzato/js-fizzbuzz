@@ -23,18 +23,24 @@ for (let i = 1; i <= 100; i++){
     let FizzBuzz = ("FizzBuzz");
 
 // divido per colori e numeri se multiplo di 3 o di 5 o entrambi
-    
     if (i%(3*5)==0) {
+        // assegno se divisibile sia per 3 e 5 lo style rosso
         square.classList.add("squarered");
+        // assegno al div la scritta
         square.append(FizzBuzz);
     }else if (i%5==0) {
+        // assegno se divisibile sia per 5 lo style rosso
         square.classList.add("squareyellow");
+        // assegno al div la scritta
         square.append(Buzz);
     }else if (i%3==0) {
+        // assegno se divisibile sia per 3 lo style rosso
         square.classList.add("squaregreen");
+        // assegno al div la scritta
         square.append(Fizz);
     }else{
         container.append(square);
+        // assegno al div i numeri
         square.append(i);
     }
 }
